@@ -1,17 +1,16 @@
-import React from 'react'
-import Topnav from './components/Topnav'
-import Hero from './components/Hero'
-import Powered from './components/Powered'
-import About from './components/About'
-import Project from './components/Project'
-import Footer from './components/Footer'
-import Contact from './components/Contact'
-
+import React from "react";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Powered from "./components/Powered";
+import About from "./components/About";
+import Project from "./components/Project";
+import Footer from "./components/organisms/Footer";
+import Contact from "./components/Contact";
 
 const App = () => {
   return (
     <>
-      <Topnav />
+      <Navbar />
       <Hero />
       <Powered />
       <About />
@@ -19,7 +18,7 @@ const App = () => {
       <Contact />
       <Footer />
     </>
-    )
-}
+  );
+};
 
-export default App
+export default App;
