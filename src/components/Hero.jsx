@@ -61,7 +61,7 @@ const Hero = () => {
             transition={{ duration: 0.75, delay: 0.25 }}
             className="w-full self-center mt-10 px-4 lg:w-1/2"
           >
-            <div class="w-1/2 bg-gray-800 h-[6px] dark:bg-gray-100 mb-4"></div>
+            <div className="w-1/2 bg-gray-800 h-[6px] dark:bg-gray-100 mb-4"></div>
             <h1 className="text-base font-semibold text-primary md:text-xl">
               Hey There, I'm
               <span className="block font-bold text-dark text-4xl mt-1 lg:text-5xl">
