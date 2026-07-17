@@ -1,23 +1,27 @@
 import React from "react";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Powered from "./components/organisms/Powered";
-import About from "./components/organisms/About";
-import Project from "./components/Project";
-import Contact from "./components/Contact";
-import Footer from "./components/organisms/Footer";
+import { BrowserRouter } from "react-router-dom";
+import ThemeProvider from "./providers/ThemeProvider";
+import CustomCursor from "./motion/CustomCursor";
+import Loader from "./components/system/Loader";
+import Nav from "./components/layout/Nav";
+import Footer from "./components/layout/Footer";
+import Ambient from "./components/ui/Ambient";
+import Noise from "./components/ui/Noise";
+import AnimatedRoutes from "./routes/AnimatedRoutes";
 
 const App = () => {
   return (
-    <>
-      <Navbar />
-      <Hero />
-      <Powered />
-      <About />
-      <Project />
-      <Contact />
-      <Footer />
-    </>
+    <ThemeProvider>
+      <BrowserRouter>
+        <Ambient />
+        <Noise />
+        <Loader />
+        <CustomCursor />
+        <Nav />
+        <AnimatedRoutes />
+        <Footer />
+      </BrowserRouter>
+    </ThemeProvider>
   );
 };
 
