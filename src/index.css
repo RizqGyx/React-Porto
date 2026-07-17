@@ -1,13 +1,115 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-* {
-    font-family: 'Roboto', sans-serif;
+:root {
+  --c-paper: 244 244 240;
+  --c-surface: 255 255 255;
+  --c-ink: 12 12 14;
+  --c-muted: 90 92 96;
+  --c-line: 18 18 20;
+  --c-accent: 13 148 136;
+  color-scheme: light;
 }
 
-html {
+:root[data-theme="dark"] {
+  --c-paper: 10 10 12;
+  --c-surface: 22 23 26;
+  --c-ink: 244 244 240;
+  --c-muted: 158 160 166;
+  --c-line: 244 244 240;
+  --c-accent: 45 212 191;
+  color-scheme: dark;
+}
+
+@layer base {
+  * {
+    font-family: 'Roboto', system-ui, sans-serif;
+  }
+
+  html {
     scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-paper text-ink antialiased;
+    transition: background-color 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+      color 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: '"Space Grotesk Variable"', 'Space Grotesk', sans-serif;
+  }
+
+  :focus-visible {
+    outline: 2px solid rgb(var(--c-accent));
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background: rgb(var(--c-accent) / 0.9);
+    color: rgb(var(--c-paper));
+  }
+}
+
+@layer components {
+  .shell {
+    @apply w-full max-w-[1320px] mx-auto px-5 lg:px-10;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center rounded-full px-8 py-4 text-sm font-semibold transition-colors;
+  }
+
+  .btn-primary {
+    @apply bg-accent text-paper;
+  }
+
+  .btn-ghost {
+    @apply border border-line/20 text-ink hover:border-accent hover:text-accent;
+  }
+
+  .field {
+    @apply w-full border-b border-line/20 bg-transparent py-4 text-lg text-ink placeholder:text-muted/60 focus:border-accent focus:outline-none transition-colors;
+  }
+
+  .cursor-none-desktop {
+    cursor: none;
+  }
+
+  .skill-edge {
+    stroke-width: 1;
+  }
+}
+
+@keyframes skilldash {
+  to {
+    stroke-dashoffset: -28;
+  }
+}
+
+.skill-edge-flow {
+  stroke-dasharray: 4 10;
+  animation: skilldash 0.8s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (hover: none), (max-width: 1023px) {
+  .cursor-none-desktop {
+    cursor: auto;
+  }
 }
