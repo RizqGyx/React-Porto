@@ -1,4 +1,4 @@
-import { media} from "./media";
+import { media } from "./media";
 
 export const experience = [
   {
@@ -6,44 +6,44 @@ export const experience = [
     role: "Undergraduate, Informatics / Computer Science",
     org: "UPN Veteran Jakarta",
     start: "2021",
-    end: "Present",
-    status: "Final semester",
+    end: "2026",
+    status: "Graduated",
     detail:
       "Undergraduate studies in Computer Science, focusing on software engineering and fullstack development.",
-    image: media.heroAbstract,
+    image: "/UPNVJ.jpg",
   },
   {
     kind: "education",
     role: "Fullstack Web Development Program",
     org: "Binar Academy",
-    start: "2023",
+    start: "2024",
     end: "2024",
-    status: null,
+    status: "Current",
     detail:
-      "Intensive fullstack web development bootcamp covering modern JavaScript, React, and backend fundamentals.",
-    image: media.aboutTexture,
+      "Completed the intensive fullstack web development bootcamp (modern JavaScript, React, backend fundamentals) and currently continuing at Binar.",
+    image: "/Binar.jpeg",
+  },
+  {
+    kind: "education",
+    role: "Apple Developer Academy",
+    org: "Infinite Learning · Batam",
+    start: "2026",
+    end: "Present",
+    status: "Present",
+    detail:
+      "Selected for the Apple Developer Academy in Batam (with Infinite Learning) — learning app development, design, and product thinking on Apple platforms.",
+    image: "/appleBatam.jpg",
   },
   {
     kind: "work",
-    role: "Frontend Developer (Freelance)",
-    org: "Independent Projects",
-    start: "2023",
+    role: "Full-Stack Developer",
+    org: "Upwork",
+    start: "2026",
     end: "Present",
-    status: null,
+    status: "Present",
     detail:
-      "Designing and building responsive web apps for small clients and personal briefs using React, Tailwind, and Framer Motion.",
-    image: media.workBackdrop,
-  },
-  {
-    kind: "activity",
-    role: "Frontend Assessment",
-    org: "Detikcom",
-    start: "2023",
-    end: "2023",
-    status: null,
-    detail:
-      "Completed a frontend design assignment: a responsive, hand-coded landing page built with HTML, CSS, and JavaScript.",
-    image: media.contactTexture,
+      "Building booking & membership apps for gyms and studios — full-stack development from UI to backend for clients on Upwork.",
+    image: "/Upwork.png",
   },
 ];
 

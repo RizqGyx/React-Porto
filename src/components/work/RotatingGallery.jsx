@@ -79,7 +79,7 @@ export default function RotatingGallery() {
   }, []);
 
   return (
-    <div ref={wrapRef} className="relative my-6 h-[80vh] min-h-[560px] w-full overflow-hidden">
+    <div ref={wrapRef} className="relative isolate my-6 h-[80vh] min-h-[560px] w-full overflow-hidden">
       <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
         <img src="/LogoT.png" alt="" className="h-8 w-8 opacity-40" />
       </div>
